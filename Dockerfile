@@ -37,6 +37,12 @@ RUN curl -sqL "http://prdownloads.sourceforge.net/metamod/metamod-$metamod_versi
 ADD files/liblist.gam /opt/hlds/cstrike/liblist.gam
 # Remove this line if you aren't going to install/use amxmodx and dproto
 ADD files/plugins.ini /opt/hlds/cstrike/addons/metamod/plugins.ini
+COPY files/podbot cstrike/addons/podbot
+COPY files/gfx cstrike/gfx
+COPY files/models cstrike/models
+COPY files/overviews cstrike/overviews
+COPY files/sound cstrike/sound
+COPY files/sprites cstrike/sprites
 
 # Install dproto
 RUN mkdir -p /opt/hlds/cstrike/addons/dproto
